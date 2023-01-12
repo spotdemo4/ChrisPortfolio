@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  chris_portfolio:
+    build: .
+    container_name: chris_portfolio
+    ports:
+      - "5075:3000"
