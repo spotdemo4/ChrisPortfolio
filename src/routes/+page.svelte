@@ -177,8 +177,8 @@
 
 <div class="bg-[url('/splash.png')]">
 	<div class="backdrop-blur-sm py-14">
-		<h1 class="text-black text-5xl text-center font-bold">Chris Wagner</h1>
-		<h2 class="text-black text-2xl text-center">Industrial Designer</h2>
+		<h1 class="text-black black:text-black text-5xl text-center font-bold">Chris Wagner</h1>
+		<h2 class="text-black black:text-black text-2xl text-center">Industrial Designer</h2>
 	</div>
 </div>
 
@@ -260,7 +260,7 @@
 <div class="px-2 py-10 bg-gray-800" id="contact">
 	<h2 class="text-white text-center text-5xl font-bold mb-10">Let's get in touch!</h2>
 	<div class="flex justify-center">
-		<form action="https://mailthis.to/cwagner@collegeforcreativestudies.edu" method="POST" encType="multipart/form-data" class="bg-gray-900 p-8 rounded-lg w-96">
+		<form action="https://mailthis.to/chrisgwagner.design@gmail.com" method="POST" encType="multipart/form-data" class="bg-gray-900 p-8 rounded-lg w-96">
 			<div class="mb-6">
 				<Label for="name" class="block mb-2">Your Name</Label>
 				<Input  name="name" id="name" type="text" placeholder="John Doe" required />
