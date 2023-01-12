@@ -140,12 +140,11 @@
 	function onSubmit() {}
 </script>
 
-<div class="relative px-8">
-	<Navbar
+<Navbar
 		let:hidden
 		let:toggle
 		color="none"
-		navClass="px-2 sm:px-4 py-2.5 absolute w-full z-20 top-0 left-0 border-b border-gray-600 bg-gray-900"
+		navClass="px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-gray-600 bg-gray-900"
 	>
 		<NavBrand href="/">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
@@ -171,9 +170,6 @@
 			<NavLi href="#contact">Contact</NavLi>
 		</NavUl>
 	</Navbar>
-</div>
-
-<div class="h-16" />
 
 <div class="bg-[url('/splash.png')] invert">
 	<div class="backdrop-blur-sm py-14">
