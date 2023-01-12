@@ -175,7 +175,7 @@
 
 <div class="h-16" />
 
-<div class="bg-[url('/splash.png')]">
+<div class="bg-[url('/splash.png')] invert">
 	<div class="backdrop-blur-sm py-14">
 		<h1 class="text-black black:text-black text-5xl text-center font-bold">Chris Wagner</h1>
 		<h2 class="text-black black:text-black text-2xl text-center">Industrial Designer</h2>
