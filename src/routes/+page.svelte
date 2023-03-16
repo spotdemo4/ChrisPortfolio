@@ -11,6 +11,7 @@
 		Textarea,
 		Button
 	} from 'flowbite-svelte';
+	import { browser } from '$app/environment';
 
 	const miataImages = [
 		{
@@ -327,7 +328,7 @@
 	</div>
 </div>
 
-<div class="flex flex-row-reverse px-2 py-16 flex-wrap justify-around bg-gray-800" id="overwatch">
+<div class="flex flex-row-reverse px-2 py-16 flex-wrap justify-around bg-gray-800" id="johndeere">
 	<div class="max-w-6xl mx-2 basis-1/2 grow" id="coupe">
 		<Carousel
 			images={deereImages}
@@ -343,32 +344,27 @@
 		<h2 class="text-white text-left text-3xl mb-8">The Future of Farming</h2>
 		<p class="text-white text-left text-2xl mb-10">
 			By 2053, experts predict an "extreme heat belt" will cut across the United States, stretching
-			from Texas and Louisiana to Illinois and southwest Michigan.
-		</p>
-		<p class="text-white text-left text-2xl mb-10">
-			The Sub-Surface irrigation drone, comprised of a surface tender and a sub-surface underground
-			unit, will be able to prepare the soil in temperatures exceeding 100 degrees Fahrenheit. The
-			underground units are launched by the Surface Tender in a side-by-side formation, allowing the
-			units to cover more ground. This initial run is to inject water with seed, constantly
-			calculating the correct amount of water to apply.
-		</p>
-		<p class="text-white text-left text-2xl">
-			The units will then connect to a biodegradable, fertilizer-infused irrigation hose. Once the
-			hose has been laid out, the underground unit will resurface, providing a connection point from
-			the hose to a water pump. The hose will provide moisture to the field and decompose only after
-			the current growing season is finished, preparing the soil for the upcoming season.
+			from Texas and Louisiana to Illinois and southwest Michigan. With much of America caught in an
+			extreme heat wave, the sub-surface irrigation drone will be needed to moisturize soil.
 		</p>
 	</div>
 </div>
 
-<div class="px-2 py-16 bg-gray-900" id="contact">
+<div class="flex flex-col px-2 py-16 justify-center bg-gray-900" id="resume">
+	<h1 class="text-white text-center text-5xl font-bold mb-5">Resume</h1>
+	<div class="flex justify-center">
+		<embed src="/resume.pdf" width="1000" class="h-[55rem] sm:h-[65rem] md:h-[75rem] lg:h-[81rem]" type="application/pdf" />
+	</div>
+</div>
+
+<div class="px-2 py-16 bg-gray-800" id="contact">
 	<h2 class="text-white text-center text-5xl font-bold mb-10">Let's get in touch!</h2>
 	<div class="flex justify-center">
 		<form
 			action="https://mailthis.to/chrisgwagner.design@gmail.com"
 			method="POST"
 			encType="multipart/form-data"
-			class="bg-gray-800 p-8 rounded-lg w-96"
+			class="bg-gray-900 p-8 rounded-lg w-96"
 		>
 			<div class="mb-6">
 				<Label for="name" class="block mb-2">Your Name</Label>
