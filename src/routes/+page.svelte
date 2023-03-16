@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
-	import { onMount } from 'svelte';
 	import {
 		Carousel,
 		Navbar,
@@ -13,11 +11,6 @@
 		Textarea,
 		Button
 	} from 'flowbite-svelte';
-
-	let ready = false;
-	onMount(() => {
-		ready = true;
-	});
 
 	const miataImages = [
 		{
@@ -133,11 +126,88 @@
 			imgurl: 'city/c14.svg'
 		}
 	];
-	let activeIndex = 0;
-
-	let isOpen = false;
-
-	function onSubmit() {}
+	const deereImages = [
+		{
+			id: 0,
+			imgurl: 'deere/d1.svg'
+		},
+		{
+			id: 1,
+			imgurl: 'deere/d2.svg'
+		},
+		{
+			id: 2,
+			imgurl: 'deere/d3.svg'
+		},
+		{
+			id: 3,
+			imgurl: 'deere/d4.svg'
+		},
+		{
+			id: 4,
+			imgurl: 'deere/d5.svg'
+		},
+		{
+			id: 5,
+			imgurl: 'deere/d6.svg'
+		},
+		{
+			id: 6,
+			imgurl: 'deere/d7.svg'
+		},
+		{
+			id: 7,
+			imgurl: 'deere/d8.svg'
+		},
+		{
+			id: 8,
+			imgurl: 'deere/d9.svg'
+		},
+		{
+			id: 9,
+			imgurl: 'deere/d10.svg'
+		},
+		{
+			id: 10,
+			imgurl: 'deere/d11.svg'
+		},
+		{
+			id: 11,
+			imgurl: 'deere/d12.svg'
+		},
+		{
+			id: 12,
+			imgurl: 'deere/d13.svg'
+		},
+		{
+			id: 13,
+			imgurl: 'deere/d14.svg'
+		},
+		{
+			id: 14,
+			imgurl: 'deere/d15.svg'
+		},
+		{
+			id: 15,
+			imgurl: 'deere/d16.svg'
+		},
+		{
+			id: 16,
+			imgurl: 'deere/d17.svg'
+		},
+		{
+			id: 17,
+			imgurl: 'deere/d18.svg'
+		},
+		{
+			id: 18,
+			imgurl: 'deere/d19.svg'
+		},
+		{
+			id: 19,
+			imgurl: 'deere/d20.svg'
+		}
+	];
 </script>
 
 <Navbar
@@ -164,9 +234,7 @@
 	<NavHamburger on:click={toggle} />
 	<NavUl {hidden}>
 		<NavLi href="/" active={true}>Home</NavLi>
-		<NavLi href="#coupe">2030 Sports Coupe</NavLi>
-		<NavLi href="#overwatch">Overwatch Vehicle</NavLi>
-		<NavLi href="#city">Multipurpose City Vehicle</NavLi>
+		<NavLi href="/resume.pdf" target="_blank">Resume</NavLi>
 		<NavLi href="#contact">Contact</NavLi>
 	</NavUl>
 </Navbar>
@@ -190,7 +258,8 @@
 		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
 	</div>
 	<div class="basis-1/2 grow my-10 px-10 self-center">
-		<h1 class="text-white text-right text-5xl font-bold mb-10">2030 Sports Coupe</h1>
+		<h1 class="text-white text-right text-5xl font-bold mb-2">2030 Sports Coupe</h1>
+		<h2 class="text-white text-right text-3xl mb-8">Highlighting Heritage</h2>
 		<p class="text-white text-right text-2xl mb-10">
 			This project is to celebrate the Miata's 40th anniversary. There are plenty of styling cues
 			that look back to all of the previous generations of Miata and it's friendly personality that
@@ -215,7 +284,8 @@
 		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
 	</div>
 	<div class="basis-1/2 grow my-10 px-10 self-center">
-		<h1 class="text-white text-left text-5xl font-bold mb-10">Manned Overwatch Vehicle</h1>
+		<h1 class="text-white text-left text-5xl font-bold mb-2">Manned Overwatch Vehicle</h1>
+		<h2 class="text-white text-left text-3xl mb-8">Strength in Safety</h2>
 		<p class="text-white text-left text-2xl mb-10">
 			<b>STRONGHOLD</b> would be a Hydrogen powered vehicle, utilizing H2 Fuel Cells.
 		</p>
@@ -243,7 +313,8 @@
 		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
 	</div>
 	<div class="basis-1/2 grow my-10 px-10 self-center">
-		<h1 class="text-white text-right text-5xl font-bold mb-10">Multipurpose City Vehicle</h1>
+		<h1 class="text-white text-right text-5xl font-bold mb-2">Multipurpose City Vehicle</h1>
+		<h2 class="text-white text-right text-3xl mb-8">Wheelbase On Demand</h2>
 		<p class="text-white text-right text-2xl mb-10">
 			This vehicle is designed to be owned by cities and reduce the number of different types of
 			vehicles cities use. Reducing the number of different vehicles would reduce the number of
@@ -256,14 +327,48 @@
 	</div>
 </div>
 
-<div class="px-2 py-16 bg-gray-800" id="contact">
+<div class="flex flex-row-reverse px-2 py-16 flex-wrap justify-around bg-gray-800" id="overwatch">
+	<div class="max-w-6xl mx-2 basis-1/2 grow" id="coupe">
+		<Carousel
+			images={deereImages}
+			showCaptions={false}
+			showThumbs={false}
+			divClass="overflow-hidden relative h-auto rounded-lg"
+			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60"
+		/>
+		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
+	</div>
+	<div class="basis-1/2 grow my-10 px-10 self-center">
+		<h1 class="text-white text-left text-5xl font-bold mb-2">Sub-Surface Irrigation Drone</h1>
+		<h2 class="text-white text-left text-3xl mb-8">The Future of Farming</h2>
+		<p class="text-white text-left text-2xl mb-10">
+			By 2053, experts predict an "extreme heat belt" will cut across the United States, stretching
+			from Texas and Louisiana to Illinois and southwest Michigan.
+		</p>
+		<p class="text-white text-left text-2xl mb-10">
+			The Sub-Surface irrigation drone, comprised of a surface tender and a sub-surface underground
+			unit, will be able to prepare the soil in temperatures exceeding 100 degrees Fahrenheit. The
+			underground units are launched by the Surface Tender in a side-by-side formation, allowing the
+			units to cover more ground. This initial run is to inject water with seed, constantly
+			calculating the correct amount of water to apply.
+		</p>
+		<p class="text-white text-left text-2xl">
+			The units will then connect to a biodegradable, fertilizer-infused irrigation hose. Once the
+			hose has been laid out, the underground unit will resurface, providing a connection point from
+			the hose to a water pump. The hose will provide moisture to the field and decompose only after
+			the current growing season is finished, preparing the soil for the upcoming season.
+		</p>
+	</div>
+</div>
+
+<div class="px-2 py-16 bg-gray-900" id="contact">
 	<h2 class="text-white text-center text-5xl font-bold mb-10">Let's get in touch!</h2>
 	<div class="flex justify-center">
 		<form
 			action="https://mailthis.to/chrisgwagner.design@gmail.com"
 			method="POST"
 			encType="multipart/form-data"
-			class="bg-gray-900 p-8 rounded-lg w-96"
+			class="bg-gray-800 p-8 rounded-lg w-96"
 		>
 			<div class="mb-6">
 				<Label for="name" class="block mb-2">Your Name</Label>
