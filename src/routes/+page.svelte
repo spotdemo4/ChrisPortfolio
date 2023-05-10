@@ -11,38 +11,7 @@
 		Textarea,
 		Button
 	} from 'flowbite-svelte';
-	import { browser } from '$app/environment';
 
-	const miataImages = [
-		{
-			id: 0,
-			imgurl: 'miata/m1.svg'
-		},
-		{
-			id: 1,
-			imgurl: 'miata/m2.svg'
-		},
-		{
-			id: 2,
-			imgurl: 'miata/m3.svg'
-		},
-		{
-			id: 3,
-			imgurl: 'miata/m4.svg'
-		},
-		{
-			id: 4,
-			imgurl: 'miata/m5.svg'
-		},
-		{
-			id: 5,
-			imgurl: 'miata/m6.svg'
-		},
-		{
-			id: 6,
-			imgurl: 'miata/m7.svg'
-		}
-	];
 	const armyImages = [
 		{
 			id: 0,
@@ -130,83 +99,103 @@
 	const deereImages = [
 		{
 			id: 0,
-			imgurl: 'deere/d1.svg'
+			imgurl: 'deere/d1.png'
 		},
 		{
 			id: 1,
-			imgurl: 'deere/d2.svg'
+			imgurl: 'deere/d2.png'
 		},
 		{
 			id: 2,
-			imgurl: 'deere/d3.svg'
+			imgurl: 'deere/d3.png'
 		},
 		{
 			id: 3,
-			imgurl: 'deere/d4.svg'
+			imgurl: 'deere/d4.png'
 		},
 		{
 			id: 4,
-			imgurl: 'deere/d5.svg'
+			imgurl: 'deere/d5.png'
 		},
 		{
 			id: 5,
-			imgurl: 'deere/d6.svg'
+			imgurl: 'deere/d6.png'
 		},
 		{
 			id: 6,
-			imgurl: 'deere/d7.svg'
+			imgurl: 'deere/d7.png'
 		},
 		{
 			id: 7,
-			imgurl: 'deere/d8.svg'
+			imgurl: 'deere/d8.png'
 		},
 		{
 			id: 8,
-			imgurl: 'deere/d9.svg'
+			imgurl: 'deere/d9.png'
 		},
 		{
 			id: 9,
-			imgurl: 'deere/d10.svg'
+			imgurl: 'deere/d10.png'
 		},
 		{
 			id: 10,
-			imgurl: 'deere/d11.svg'
+			imgurl: 'deere/d11.png'
 		},
 		{
 			id: 11,
-			imgurl: 'deere/d12.svg'
+			imgurl: 'deere/d12.png'
 		},
 		{
 			id: 12,
-			imgurl: 'deere/d13.svg'
+			imgurl: 'deere/d13.png'
 		},
 		{
 			id: 13,
-			imgurl: 'deere/d14.svg'
+			imgurl: 'deere/d14.png'
 		},
 		{
 			id: 14,
-			imgurl: 'deere/d15.svg'
+			imgurl: 'deere/d15.png'
 		},
 		{
 			id: 15,
-			imgurl: 'deere/d16.svg'
+			imgurl: 'deere/d16.png'
 		},
 		{
 			id: 16,
-			imgurl: 'deere/d17.svg'
+			imgurl: 'deere/d17.png'
 		},
 		{
 			id: 17,
-			imgurl: 'deere/d18.svg'
+			imgurl: 'deere/d18.png'
 		},
 		{
 			id: 18,
-			imgurl: 'deere/d19.svg'
+			imgurl: 'deere/d19.png'
 		},
 		{
 			id: 19,
-			imgurl: 'deere/d20.svg'
+			imgurl: 'deere/d20.png'
+		},
+		{
+			id: 20,
+			imgurl: 'deere/d21.png'
+		},
+		{
+			id: 21,
+			imgurl: 'deere/d22.png'
+		},
+		{
+			id: 22,
+			imgurl: 'deere/d23.png'
+		},
+		{
+			id: 23,
+			imgurl: 'deere/d24.png'
+		},
+		{
+			id: 24,
+			imgurl: 'deere/d25.png'
 		}
 	];
 </script>
@@ -244,32 +233,6 @@
 	<div class="backdrop-blur-sm py-14">
 		<h1 class="text-black black:text-black text-5xl text-center font-bold">Chris Wagner</h1>
 		<h2 class="text-black black:text-black text-2xl text-center">Industrial Designer</h2>
-	</div>
-</div>
-
-<div class="flex flex-row px-2 py-16 flex-wrap justify-around bg-gray-900" id="coupe">
-	<div class="max-w-6xl mx-2 basis-1/2 grow">
-		<Carousel
-			images={miataImages}
-			showCaptions={false}
-			showThumbs={false}
-			divClass="overflow-hidden relative h-auto rounded-lg"
-			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60"
-		/>
-		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
-	</div>
-	<div class="basis-1/2 grow my-10 px-10 self-center">
-		<h1 class="text-white text-right text-5xl font-bold mb-2">2030 Sports Coupe</h1>
-		<h2 class="text-white text-right text-3xl mb-8">Highlighting Heritage</h2>
-		<p class="text-white text-right text-2xl mb-10">
-			This project is to celebrate the Miata's 40th anniversary. There are plenty of styling cues
-			that look back to all of the previous generations of Miata and it's friendly personality that
-			has captivated both young and old through the years.
-		</p>
-		<p class="text-white text-right text-2xl">
-			Here is a small collection of sketches for the 2030 Mazda Miata interior. Note the progression
-			from the smaller early sketches and the larger, later sketches.
-		</p>
 	</div>
 </div>
 
