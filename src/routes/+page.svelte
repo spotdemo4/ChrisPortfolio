@@ -243,7 +243,7 @@
 			showCaptions={false}
 			showThumbs={false}
 			divClass="overflow-hidden relative h-auto rounded-lg"
-			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60 invisible sm:visible"
+			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60 hidden sm:inline"
 		/>
 		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
 	</div>
@@ -272,7 +272,7 @@
 			showCaptions={false}
 			showThumbs={false}
 			divClass="overflow-hidden relative h-auto rounded-lg"
-			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60 invisible sm:visible"
+			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60 hidden sm:inline"
 		/>
 		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
 	</div>
@@ -298,7 +298,7 @@
 			showCaptions={false}
 			showThumbs={false}
 			divClass="overflow-hidden relative h-auto rounded-lg"
-			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60 invisible sm:visible"
+			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60 hidden sm:inline"
 		/>
 		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
 	</div>
