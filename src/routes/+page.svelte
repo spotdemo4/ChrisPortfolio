@@ -99,103 +99,103 @@
 	const deereImages = [
 		{
 			id: 0,
-			imgurl: 'deere/d1.png'
+			imgurl: 'deere/d1.svg'
 		},
 		{
 			id: 1,
-			imgurl: 'deere/d2.png'
+			imgurl: 'deere/d2.svg'
 		},
 		{
 			id: 2,
-			imgurl: 'deere/d3.png'
+			imgurl: 'deere/d3.svg'
 		},
 		{
 			id: 3,
-			imgurl: 'deere/d4.png'
+			imgurl: 'deere/d4.svg'
 		},
 		{
 			id: 4,
-			imgurl: 'deere/d5.png'
+			imgurl: 'deere/d5.svg'
 		},
 		{
 			id: 5,
-			imgurl: 'deere/d6.png'
+			imgurl: 'deere/d6.svg'
 		},
 		{
 			id: 6,
-			imgurl: 'deere/d7.png'
+			imgurl: 'deere/d7.svg'
 		},
 		{
 			id: 7,
-			imgurl: 'deere/d8.png'
+			imgurl: 'deere/d8.svg'
 		},
 		{
 			id: 8,
-			imgurl: 'deere/d9.png'
+			imgurl: 'deere/d9.svg'
 		},
 		{
 			id: 9,
-			imgurl: 'deere/d10.png'
+			imgurl: 'deere/d10.svg'
 		},
 		{
 			id: 10,
-			imgurl: 'deere/d11.png'
+			imgurl: 'deere/d11.svg'
 		},
 		{
 			id: 11,
-			imgurl: 'deere/d12.png'
+			imgurl: 'deere/d12.svg'
 		},
 		{
 			id: 12,
-			imgurl: 'deere/d13.png'
+			imgurl: 'deere/d13.svg'
 		},
 		{
 			id: 13,
-			imgurl: 'deere/d14.png'
+			imgurl: 'deere/d14.svg'
 		},
 		{
 			id: 14,
-			imgurl: 'deere/d15.png'
+			imgurl: 'deere/d15.svg'
 		},
 		{
 			id: 15,
-			imgurl: 'deere/d16.png'
+			imgurl: 'deere/d16.svg'
 		},
 		{
 			id: 16,
-			imgurl: 'deere/d17.png'
+			imgurl: 'deere/d17.svg'
 		},
 		{
 			id: 17,
-			imgurl: 'deere/d18.png'
+			imgurl: 'deere/d18.svg'
 		},
 		{
 			id: 18,
-			imgurl: 'deere/d19.png'
+			imgurl: 'deere/d19.svg'
 		},
 		{
 			id: 19,
-			imgurl: 'deere/d20.png'
+			imgurl: 'deere/d20.svg'
 		},
 		{
 			id: 20,
-			imgurl: 'deere/d21.png'
+			imgurl: 'deere/d21.svg'
 		},
 		{
 			id: 21,
-			imgurl: 'deere/d22.png'
+			imgurl: 'deere/d22.svg'
 		},
 		{
 			id: 22,
-			imgurl: 'deere/d23.png'
+			imgurl: 'deere/d23.svg'
 		},
 		{
 			id: 23,
-			imgurl: 'deere/d24.png'
+			imgurl: 'deere/d24.svg'
 		},
 		{
 			id: 24,
-			imgurl: 'deere/d25.png'
+			imgurl: 'deere/d25.svg'
 		}
 	];
 </script>
