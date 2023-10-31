@@ -144,38 +144,6 @@
 		{
 			id: 16,
 			imgurl: 'deere/d17.svg'
-		},
-		{
-			id: 17,
-			imgurl: 'deere/d18.svg'
-		},
-		{
-			id: 18,
-			imgurl: 'deere/d19.svg'
-		},
-		{
-			id: 19,
-			imgurl: 'deere/d20.svg'
-		},
-		{
-			id: 20,
-			imgurl: 'deere/d21.svg'
-		},
-		{
-			id: 21,
-			imgurl: 'deere/d22.svg'
-		},
-		{
-			id: 22,
-			imgurl: 'deere/d23.svg'
-		},
-		{
-			id: 23,
-			imgurl: 'deere/d24.svg'
-		},
-		{
-			id: 24,
-			imgurl: 'deere/d25.svg'
 		}
 	];
 </script>
@@ -245,33 +213,7 @@
 	</div>
 </div>
 
-<div class="flex flex-row px-2 py-16 flex-wrap justify-around bg-gray-900" id="city">
-	<div class="max-w-6xl mx-2 basis-1/2 grow">
-		<Carousel
-			images={miniImages}
-			showCaptions={false}
-			showThumbs={false}
-			divClass="overflow-hidden relative h-auto rounded-lg"
-			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60 hidden sm:inline"
-		/>
-		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
-	</div>
-	<div class="basis-1/2 grow my-10 px-10 self-center">
-		<h1 class="text-white text-right text-5xl font-bold mb-2">2030 MINI Venturman</h1>
-		<h2 class="text-white text-right text-3xl mb-8">Office / Activity Vehicle</h2>
-		<p class="text-white text-right text-2xl mb-10">
-			As a result of the 2020 Covid lockdown, the number of young adults working from home has risen dramatically. This has led to an increase in symptoms relating to depression and anxiety. 
-		</p>
-		<p class="text-white text-right text-2xl mb-10">
-			As the numbers of people working remotely continues to rise, a vehicle that is capable of providing both a mobile office space as well as an escape from monotony will be beneficial to the mental health of those who work remotely. 
-		</p>
-		<p class="text-white text-right text-2xl mb-10">
-			This vehicle allows the user to travel and explore as much as they want while also allowing them to stay on top of their work no matter where they go.
-		</p>
-	</div>
-</div>
-
-<div class="flex flex-row-reverse px-2 py-16 flex-wrap justify-around bg-gray-800" id="johndeere">
+<div class="flex flex-row-reverse px-2 py-16 flex-wrap justify-around bg-gray-900" id="johndeere">
 	<div class="max-w-6xl mx-2 basis-1/2 grow" id="coupe">
 		<Carousel
 			images={deereImages}
@@ -283,12 +225,38 @@
 		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
 	</div>
 	<div class="basis-1/2 grow my-10 px-10 self-center">
-		<h1 class="text-white text-left text-5xl font-bold mb-2">Sub-Surface Irrigation Drone</h1>
-		<h2 class="text-white text-left text-3xl mb-8">The Future of Farming</h2>
-		<p class="text-white text-left text-2xl mb-10">
+		<h1 class="text-white text-right text-5xl font-bold mb-2">Sub-Surface Irrigation Drone</h1>
+		<h2 class="text-white text-right text-3xl mb-8">The Future of Farming</h2>
+		<p class="text-white text-right text-2xl mb-10">
 			By 2053, experts predict an "extreme heat belt" will cut across the United States, stretching
 			from Texas and Louisiana to Illinois and southwest Michigan. With much of America caught in an
 			extreme heat wave, the sub-surface irrigation drone will be needed to moisturize soil.
+		</p>
+	</div>
+</div>
+
+<div class="flex flex-row px-2 py-16 flex-wrap justify-around bg-gray-800" id="city">
+	<div class="max-w-6xl mx-2 basis-1/2 grow">
+		<Carousel
+			images={miniImages}
+			showCaptions={false}
+			showThumbs={false}
+			divClass="overflow-hidden relative h-auto rounded-lg"
+			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60 hidden sm:inline"
+		/>
+		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
+	</div>
+	<div class="basis-1/2 grow my-10 px-10 self-center">
+		<h1 class="text-white text-left text-5xl font-bold mb-2">2030 MINI Venturman</h1>
+		<h2 class="text-white text-left text-3xl mb-8">Office / Activity Vehicle</h2>
+		<p class="text-white text-left text-2xl mb-10">
+			As a result of the 2020 Covid lockdown, the number of young adults working from home has risen dramatically. This has led to an increase in symptoms relating to depression and anxiety. 
+		</p>
+		<p class="text-white text-left text-2xl mb-10">
+			As the numbers of people working remotely continues to rise, a vehicle that is capable of providing both a mobile office space as well as an escape from monotony will be beneficial to the mental health of those who work remotely. 
+		</p>
+		<p class="text-white text-left text-2xl mb-10">
+			This vehicle allows the user to travel and explore as much as they want while also allowing them to stay on top of their work no matter where they go.
 		</p>
 	</div>
 </div>
