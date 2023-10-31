@@ -38,63 +38,43 @@
 			imgurl: 'army/a6.svg'
 		}
 	];
-	const cityImages = [
+	const miniImages = [
 		{
 			id: 0,
-			imgurl: 'city/c1.svg'
+			imgurl: 'mini/m1.svg'
 		},
 		{
 			id: 1,
-			imgurl: 'city/c2.svg'
+			imgurl: 'mini/m2.svg'
 		},
 		{
 			id: 2,
-			imgurl: 'city/c3.svg'
+			imgurl: 'mini/m3.svg'
 		},
 		{
 			id: 3,
-			imgurl: 'city/c4.svg'
+			imgurl: 'mini/m4.svg'
 		},
 		{
 			id: 4,
-			imgurl: 'city/c5.svg'
+			imgurl: 'mini/m5.svg'
 		},
 		{
 			id: 5,
-			imgurl: 'city/c6.svg'
+			imgurl: 'mini/m6.svg'
 		},
 		{
 			id: 6,
-			imgurl: 'city/c7.svg'
+			imgurl: 'mini/m7.svg'
 		},
 		{
 			id: 7,
-			imgurl: 'city/c8.svg'
+			imgurl: 'mini/m8.svg'
 		},
 		{
 			id: 8,
-			imgurl: 'city/c9.svg'
+			imgurl: 'mini/m9.svg'
 		},
-		{
-			id: 9,
-			imgurl: 'city/c10.svg'
-		},
-		{
-			id: 10,
-			imgurl: 'city/c11.svg'
-		},
-		{
-			id: 11,
-			imgurl: 'city/c12.svg'
-		},
-		{
-			id: 12,
-			imgurl: 'city/c13.svg'
-		},
-		{
-			id: 13,
-			imgurl: 'city/c14.svg'
-		}
 	];
 	const deereImages = [
 		{
@@ -268,7 +248,7 @@
 <div class="flex flex-row px-2 py-16 flex-wrap justify-around bg-gray-900" id="city">
 	<div class="max-w-6xl mx-2 basis-1/2 grow">
 		<Carousel
-			images={cityImages}
+			images={miniImages}
 			showCaptions={false}
 			showThumbs={false}
 			divClass="overflow-hidden relative h-auto rounded-lg"
@@ -277,16 +257,16 @@
 		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
 	</div>
 	<div class="basis-1/2 grow my-10 px-10 self-center">
-		<h1 class="text-white text-right text-5xl font-bold mb-2">Multipurpose City Vehicle</h1>
-		<h2 class="text-white text-right text-3xl mb-8">Wheelbase On Demand</h2>
+		<h1 class="text-white text-right text-5xl font-bold mb-2">2030 MINI Venturman</h1>
+		<h2 class="text-white text-right text-3xl mb-8">Office / Activity Vehicle</h2>
 		<p class="text-white text-right text-2xl mb-10">
-			This vehicle is designed to be owned by cities and reduce the number of different types of
-			vehicles cities use. Reducing the number of different vehicles would reduce the number of
-			factories needed, which would help cities reduce their carbon footprint.
+			As a result of the 2020 Covid lockdown, the number of young adults working from home has risen dramatically. This has led to an increase in symptoms relating to depression and anxiety. 
 		</p>
-		<p class="text-white text-right text-2xl">
-			It features plastics and composite solutions which demonstrate and encompass a fully circular
-			economy, from design through end-of-life.
+		<p class="text-white text-right text-2xl mb-10">
+			As the numbers of people working remotely continues to rise, a vehicle that is capable of providing both a mobile office space as well as an escape from monotony will be beneficial to the mental health of those who work remotely. 
+		</p>
+		<p class="text-white text-right text-2xl mb-10">
+			This vehicle allows the user to travel and explore as much as they want while also allowing them to stay on top of their work no matter where they go.
 		</p>
 	</div>
 </div>
