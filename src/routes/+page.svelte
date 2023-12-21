@@ -1,6 +1,5 @@
 <script lang="ts">
 	import {
-		Carousel,
 		Navbar,
 		NavBrand,
 		NavLi,
@@ -11,148 +10,191 @@
 		Textarea,
 		Button
 	} from 'flowbite-svelte';
+	import Carousel from '$lib/Carousel.svelte';
+	import { onMount } from 'svelte';
 
-	const armyImages = [
+	const armyImages: { id: number; src: string }[] = [
 		{
 			id: 0,
-			imgurl: 'army/a1.svg'
+			src: 'army/a1.svg'
 		},
 		{
 			id: 1,
-			imgurl: 'army/a2.svg'
+			src: 'army/a2.svg'
 		},
 		{
 			id: 2,
-			imgurl: 'army/a3.svg'
+			src: 'army/a3.svg'
 		},
 		{
 			id: 3,
-			imgurl: 'army/a4.svg'
+			src: 'army/a4.svg'
 		},
 		{
 			id: 4,
-			imgurl: 'army/a5.svg'
+			src: 'army/a5.svg'
 		},
 		{
 			id: 5,
-			imgurl: 'army/a6.svg'
+			src: 'army/a6.svg'
 		}
 	];
+	let current_army_id = 0;
+
 	const miniImages = [
 		{
 			id: 0,
-			imgurl: 'mini/m1.svg'
+			src: 'mini/m1.svg'
 		},
 		{
 			id: 1,
-			imgurl: 'mini/m2.svg'
+			src: 'mini/m2.svg'
 		},
 		{
 			id: 2,
-			imgurl: 'mini/m3.svg'
+			src: 'mini/m3.svg'
 		},
 		{
 			id: 3,
-			imgurl: 'mini/m4.svg'
+			src: 'mini/m4.svg'
 		},
 		{
 			id: 4,
-			imgurl: 'mini/m5.svg'
+			src: 'mini/m5.svg'
 		},
 		{
 			id: 5,
-			imgurl: 'mini/m6.svg'
+			src: 'mini/m6.svg'
 		},
 		{
 			id: 6,
-			imgurl: 'mini/m7.svg'
+			src: 'mini/m7.svg'
 		},
 		{
 			id: 7,
-			imgurl: 'mini/m8.svg'
+			src: 'mini/m8.svg'
 		},
 		{
 			id: 8,
-			imgurl: 'mini/m9.svg'
-		},
-	];
-	const deereImages = [
-		{
-			id: 0,
-			imgurl: 'deere/d1.svg'
-		},
-		{
-			id: 1,
-			imgurl: 'deere/d2.svg'
-		},
-		{
-			id: 2,
-			imgurl: 'deere/d3.svg'
-		},
-		{
-			id: 3,
-			imgurl: 'deere/d4.svg'
-		},
-		{
-			id: 4,
-			imgurl: 'deere/d5.svg'
-		},
-		{
-			id: 5,
-			imgurl: 'deere/d6.svg'
-		},
-		{
-			id: 6,
-			imgurl: 'deere/d7.svg'
-		},
-		{
-			id: 7,
-			imgurl: 'deere/d8.svg'
-		},
-		{
-			id: 8,
-			imgurl: 'deere/d9.svg'
+			src: 'mini/m9.svg'
 		},
 		{
 			id: 9,
-			imgurl: 'deere/d10.svg'
+			src: 'mini/m10.svg'
 		},
 		{
 			id: 10,
-			imgurl: 'deere/d11.svg'
+			src: 'mini/m11.svg'
 		},
 		{
 			id: 11,
-			imgurl: 'deere/d12.svg'
+			src: 'mini/m12.svg'
 		},
 		{
 			id: 12,
-			imgurl: 'deere/d13.svg'
+			src: 'mini/m13.svg'
 		},
 		{
 			id: 13,
-			imgurl: 'deere/d14.svg'
+			src: 'mini/m14.svg'
 		},
 		{
 			id: 14,
-			imgurl: 'deere/d15.svg'
+			video: true,
+			src: 'DZalRW0RKjw'
 		},
 		{
 			id: 15,
-			imgurl: 'deere/d16.svg'
+			video: true,
+			src: 'TwnUkwkQw3E'
+		}
+	];
+	let current_mini_id = 0;
+
+	const deereImages = [
+		{
+			id: 0,
+			src: 'deere/d1.svg'
+		},
+		{
+			id: 1,
+			src: 'deere/d2.svg'
+		},
+		{
+			id: 2,
+			src: 'deere/d3.svg'
+		},
+		{
+			id: 3,
+			src: 'deere/d4.svg'
+		},
+		{
+			id: 4,
+			src: 'deere/d5.svg'
+		},
+		{
+			id: 5,
+			src: 'deere/d6.svg'
+		},
+		{
+			id: 6,
+			src: 'deere/d7.svg'
+		},
+		{
+			id: 7,
+			src: 'deere/d8.svg'
+		},
+		{
+			id: 8,
+			src: 'deere/d9.svg'
+		},
+		{
+			id: 9,
+			src: 'deere/d10.svg'
+		},
+		{
+			id: 10,
+			src: 'deere/d11.svg'
+		},
+		{
+			id: 11,
+			src: 'deere/d12.svg'
+		},
+		{
+			id: 12,
+			src: 'deere/d13.svg'
+		},
+		{
+			id: 13,
+			src: 'deere/d14.svg'
+		},
+		{
+			id: 14,
+			src: 'deere/d15.svg'
+		},
+		{
+			id: 15,
+			src: 'deere/d16.svg'
 		},
 		{
 			id: 16,
-			imgurl: 'deere/d17.svg'
+			src: 'deere/d17.svg'
 		}
 	];
+	let current_deere_id = 0;
+
+	onMount(() => {
+		document.getElementById("mini")!.scrollLeft = 0;
+		document.getElementById("deere")!.scrollLeft = 0;
+		document.getElementById("army")!.scrollLeft = 0;
+	});
 </script>
 
 <Navbar
 	let:hidden
 	let:toggle
 	color="none"
-	navClass="px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-gray-600 bg-gray-900"
+	class="px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-gray-600 bg-gray-900"
 >
 	<NavBrand href="/">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
@@ -169,7 +211,7 @@
 			Wagner
 		</span>
 	</NavBrand>
-	<NavHamburger on:click={toggle} />
+	<NavHamburger on:click={toggle} menuClass="text-white" />
 	<NavUl {hidden}>
 		<NavLi href="/" active={true}>Home</NavLi>
 		<NavLi href="/resume.pdf" target="_blank">Resume</NavLi>
@@ -184,50 +226,33 @@
 	</div>
 </div>
 
-<div class="flex flex-row-reverse px-2 py-16 flex-wrap justify-around bg-gray-800" id="overwatch">
-	<div class="max-w-6xl mx-2 basis-1/2 grow" id="coupe">
-		<Carousel
-			images={armyImages}
-			showCaptions={false}
-			showThumbs={false}
-			divClass="overflow-hidden relative h-auto rounded-lg"
-			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60 hidden sm:inline"
-		/>
-		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
-	</div>
-	<div class="basis-1/2 grow my-10 px-10 self-center">
-		<h1 class="text-white text-left text-5xl font-bold mb-2">Manned Overwatch Vehicle</h1>
-		<h2 class="text-white text-left text-3xl mb-8">Strength in Safety</h2>
-		<p class="text-white text-left text-2xl mb-10">
-			<b>STRONGHOLD</b> would be a Hydrogen powered vehicle, utilizing H2 Fuel Cells.
+<div class="flex flex-row-reverse px-2 py-16 flex-wrap justify-around bg-gray-800">
+	<Carousel images={miniImages} alt="Mini"/>
+	<div class="basis-1/2 grow my-10 mx-2 max-w-7xl self-center text-left text-white">
+		<h1 class="text-5xl font-bold mb-2">2030 MINI Venturman</h1>
+		<h2 class="text-3xl mb-8">Office / Activity Vehicle</h2>
+		<p class="text-2xl mb-10">
+			As a result of the 2020 Covid lockdown, the number of young adults working from home has risen
+			dramatically. This has led to an increase in symptoms relating to depression and anxiety.
 		</p>
-		<p class="text-white text-left text-2xl mb-10">
-			Hydrogen is an excellent source of energy due to its high energy content despite its light
-			weight. 1kg of hydrogen contains 33.33 kWh of usable energy.
+		<p class="text-2xl mb-10">
+			As the numbers of people working remotely continues to rise, a vehicle that is capable of
+			providing both a mobile office space as well as an escape from monotony will be beneficial to
+			the mental health of those who work remotely.
 		</p>
-		<p class="text-white text-left text-2xl">
-			Refilling the hydrogen tanks takes 3-5 minutes. The large tanks and high efficiency of H2 Fuel
-			Cells allows for this 33,000 lb vehicle to travel 400 miles on one tank, double the required
-			range.
+		<p class="text-2xl mb-10">
+			This vehicle allows the user to travel and explore as much as they want while also allowing
+			them to stay on top of their work no matter where they go.
 		</p>
 	</div>
 </div>
 
-<div class="flex flex-row-reverse px-2 py-16 flex-wrap justify-around bg-gray-900" id="johndeere">
-	<div class="max-w-6xl mx-2 basis-1/2 grow" id="coupe">
-		<Carousel
-			images={deereImages}
-			showCaptions={false}
-			showThumbs={false}
-			divClass="overflow-hidden relative h-auto rounded-lg"
-			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60 hidden sm:inline"
-		/>
-		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
-	</div>
-	<div class="basis-1/2 grow my-10 px-10 self-center">
-		<h1 class="text-white text-right text-5xl font-bold mb-2">Sub-Surface Irrigation Drone</h1>
-		<h2 class="text-white text-right text-3xl mb-8">The Future of Farming</h2>
-		<p class="text-white text-right text-2xl mb-10">
+<div class="flex flex-row-reverse px-2 py-16 flex-wrap justify-around bg-gray-900" id="overwatch">
+	<Carousel images={deereImages} alt="Farm"/>
+	<div class="basis-1/2 grow my-10 mx-2 max-w-7xl self-center text-right text-white">
+		<h1 class="text-5xl font-bold mb-2">Sub-Surface Irrigation Drone</h1>
+		<h2 class="text-3xl mb-8">The Future of Farming</h2>
+		<p class="text-2xl mb-10">
 			By 2053, experts predict an "extreme heat belt" will cut across the United States, stretching
 			from Texas and Louisiana to Illinois and southwest Michigan. With much of America caught in an
 			extreme heat wave, the sub-surface irrigation drone will be needed to moisturize soil.
@@ -235,36 +260,32 @@
 	</div>
 </div>
 
-<div class="flex flex-row px-2 py-16 flex-wrap justify-around bg-gray-800" id="city">
-	<div class="max-w-6xl mx-2 basis-1/2 grow">
-		<Carousel
-			images={miniImages}
-			showCaptions={false}
-			showThumbs={false}
-			divClass="overflow-hidden relative h-auto rounded-lg"
-			indicatorClass="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-900 opacity-60 hidden sm:inline"
-		/>
-		<p class="text-center text-white">Utilize the arrows to move through the slides</p>
-	</div>
-	<div class="basis-1/2 grow my-10 px-10 self-center">
-		<h1 class="text-white text-left text-5xl font-bold mb-2">2030 MINI Venturman</h1>
-		<h2 class="text-white text-left text-3xl mb-8">Office / Activity Vehicle</h2>
-		<p class="text-white text-left text-2xl mb-10">
-			As a result of the 2020 Covid lockdown, the number of young adults working from home has risen dramatically. This has led to an increase in symptoms relating to depression and anxiety. 
+<div class="flex flex-row-reverse px-2 py-16 flex-wrap justify-around bg-gray-800" id="overwatch">
+	<Carousel images={armyImages} alt="Army"/>
+	<div class="basis-1/2 grow my-10 mx-2 max-w-7xl self-center text-left text-white">
+		<h1 class="text-5xl font-bold mb-2">Manned Overwatch Vehicle</h1>
+		<h2 class="text-3xl mb-8">Strength in Safety</h2>
+		<p class="text-2xl mb-10">
+			<b>STRONGHOLD</b> would be a Hydrogen powered vehicle, utilizing H2 Fuel Cells.
 		</p>
-		<p class="text-white text-left text-2xl mb-10">
-			As the numbers of people working remotely continues to rise, a vehicle that is capable of providing both a mobile office space as well as an escape from monotony will be beneficial to the mental health of those who work remotely. 
+		<p class="text-2xl mb-10">
+			Hydrogen is an excellent source of energy due to its high energy content despite its light
+			weight. 1kg of hydrogen contains 33.33 kWh of usable energy.
 		</p>
-		<p class="text-white text-left text-2xl mb-10">
-			This vehicle allows the user to travel and explore as much as they want while also allowing them to stay on top of their work no matter where they go.
+		<p class="text-2xl">
+			Refilling the hydrogen tanks takes 3-5 minutes. The large tanks and high efficiency of H2 Fuel
+			Cells allows for this 33,000 lb vehicle to travel 400 miles on one tank, double the required
+			range.
 		</p>
 	</div>
 </div>
 
-<div class="flex flex-col px-2 py-16 justify-center bg-gray-900" id="resume">
+<div class="flex flex-col px-2 py-16 justify-center items-center bg-gray-900" id="resume">
 	<h1 class="text-white text-center text-5xl font-bold mb-5">Resume</h1>
-	<div class="flex justify-center">
-		<embed src="/resume.pdf" width="1000" class="h-[55rem] sm:h-[65rem] md:h-[75rem] lg:h-[81rem]" type="application/pdf" />
+	<div class="max-w-4xl">
+		<a href="/resume.pdf" target="_blank">
+			<img src="/resume.png" alt="Resume" />
+		</a>
 	</div>
 </div>
 
@@ -302,7 +323,7 @@
 				<Textarea name="message" id="textarea" placeholder="Your message" rows="4" />
 			</div>
 			<div class="flex justify-center">
-				<Button type="submit">Submit</Button>
+				<Button type="submit" class="bg-blue-600">Submit</Button>
 			</div>
 		</form>
 	</div>
