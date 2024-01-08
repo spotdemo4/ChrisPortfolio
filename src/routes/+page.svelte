@@ -101,11 +101,6 @@
 		{
 			id: 14,
 			video: true,
-			src: 'DZalRW0RKjw'
-		},
-		{
-			id: 15,
-			video: true,
 			src: 'TwnUkwkQw3E'
 		}
 	];
